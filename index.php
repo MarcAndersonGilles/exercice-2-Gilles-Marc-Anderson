@@ -1,5 +1,6 @@
 <?php get_header() ?>
 <main class="site__main">
+<h1>----INDEX.PHP----</h1>
     <?php if(have_posts()): ?>
         <section class="cours">
             <?php while(have_posts()): the_post(); ?>

@@ -1,9 +1,9 @@
 <?php get_header() ?>
 <main class="site__main">
-    <h1>---------------single.php-------</h1>
+    <h1>----CATEGORY-COURS----</h1>
     <?php if(have_posts()): ?>
         <section class="cours">
-            <?php  the_post(); ?>
+            <?php while(have_posts()): the_post(); ?>
             <article class="cours__carte">
                 <?php
                     $titre = get_the_title();
@@ -19,18 +19,8 @@
                 <p><?= $nbHeures; ?></p>
                 <p class="carte__description"><?= get_the_excerpt() ?></p>
             </article>
-   
+            <?php endwhile; ?>
         </section>
     <?php endif; ?>
 </main>
 <?php get_footer() ?>
-
-
-<main class="principal">
-    <?php if (have_posts()):the_post(); ?>
-
-    <?php the_title(); ?>
-    <?php the_content(); ?>
-    <?php endif; ?>
-
-</main>
